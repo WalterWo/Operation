@@ -1,0 +1,14 @@
+---
+- hosts: "{{ hosts }}"
+  become : yes
+  become_method : sudo
+  gather_facts: false
+  tasks: 
+    - name: "test script module"
+      script: /etc/ansible/roles/hybris/files/check_snapshot_CPU_MEM.sh "{{ metrix }}" "{{ runtime }}"
+    - name : fetched file from ansible-server into clientTest
+      fetch:
+        src: "/tmp/reports/{{ inventory_hostname }}_{{ metrix }}_instance_performace.html"
+        dest: ../../reports/
+        validate_checksum: yes
+        flat: yes

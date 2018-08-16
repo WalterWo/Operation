@@ -1,0 +1,1 @@
+Name:Average:%|%USER:0.40%|%SYSTEM:0.30%|%IOWAIT:0.00%

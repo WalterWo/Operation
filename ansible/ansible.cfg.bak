@@ -1,0 +1,9 @@
+inventory      = /etc/ansible/hosts
+forks          = 10
+sudo_user      = root
+remote_port    = 22
+module_lang    = C
+private_key_file = /root/.ssh/id_rsa
+host_key_checking = False
+timeout = 60
+log_path = /var/log/ansible.log
